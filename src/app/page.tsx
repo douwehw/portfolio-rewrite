@@ -1,7 +1,14 @@
 "use client"
 
 import Navbar from "@/sections/navbar";
+import Name from "@/sections/name";
+import Projects from "@/sections/projects";
+import AboutMe from "@/sections/aboutme";
+
+import PageWrapper from "@/components/pagewrapper";
+
 import { useState, useEffect } from "react";
+import Divider from "@/components/divider";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -18,9 +25,14 @@ export default function Home() {
     setTheme(theme === "light" ? "dark" : "light");
     console.log(`Theme changed to ${theme === "light" ? "dark" : "light"}`);
   }
+
   return (
-    <div className="flex flex-col items-center w-full h-fit min-h-screen p-5 bg-primary-light dark:bg-primary-dark">
-      <Navbar themeHandler={handleTheme} currentTheme={theme}/>
-    </div>
+    <PageWrapper>
+      <Navbar themeHandler={handleTheme} currentTheme={theme} />
+      <Name />
+      <Projects />
+      <Divider />
+      <AboutMe />
+    </PageWrapper>
   )
 }
