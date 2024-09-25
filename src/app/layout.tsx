@@ -21,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className="scroll-smooth">
-      <body className={inter.className}>
-        {children}
+      <body className={`${inter.className}`}>
+      {children}
       </body>
     </html>
   );

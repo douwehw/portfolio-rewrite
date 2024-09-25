@@ -19,7 +19,7 @@ export default function ProjectTile({ href, name, description, language, rating,
                 scale: 1.03,
                 transition: { duration: 0.05 },
             }}
-            href={"https://google.com"}
+            href={href}
             rel="noreferrer"
             target="_blank"
         >
@@ -27,18 +27,18 @@ export default function ProjectTile({ href, name, description, language, rating,
                 <div className="absolute top-2 right-2 flex flex-row items-center">
                     <div
                         className="w-3 h-3 rounded-full mr-1"
-                        style={{ background: languages["C++"], border: `solid 3px ${languages["C++"]}` }}
+                        style={{ background: languages[language], border: `solid 3px ${languages[language]}` }}
                     />
-                    <p className="font-extralight fon tracking">{"C++"}</p>
+                    <p className="font-light text-sm tracking-tighter">{language}</p>
                 </div>
-                <h1 className="font-normal text-xl mb-1 tracking-tight">{"TestName"}</h1>
-                <p className="text-sm font-light">{"Really really boring and useless description only made for testing"}</p>
+                <h1 className="font-normal text-xl mb-1 tracking-tight">{name}</h1>
+                <p className="text-sm font-light">{description}</p>
                 <div className="mt-auto flex flex-row gap-4 font-extralight">
                     <p className="flex flex-row items-center justify-center">
-                        <AiOutlineTrophy className="mr-1 w-4 h-4" /> {"99"}/10
+                        <AiOutlineTrophy className="mr-1 w-4 h-4" /> {rating}/10
                     </p>
                     <p className="flex flex-row items-center justify-center">
-                        <CgSandClock className="mr-1 w-4 h-4" /> {"9999.9"}
+                        <CgSandClock className="mr-1 w-4 h-4" /> {hours}
                     </p>
                 </div>
             </div>

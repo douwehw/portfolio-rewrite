@@ -16,7 +16,7 @@ import { loadStarsPreset } from "tsparticles-preset-stars";
 import Particles from "react-tsparticles";
 
 export default function Home() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (theme === "dark") {
