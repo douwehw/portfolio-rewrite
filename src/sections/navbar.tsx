@@ -1,31 +1,19 @@
-import { ReactNode } from "react";
+import NavButton from "@/components/navbutton";
 
 interface NavbarProps {
     themeHandler: () => void;
     currentTheme: string;
 }
 
-interface NavButtonProps {
-    children: ReactNode;
-    onClick?: () => void;
-}
-
 export default function Navbar({ themeHandler, currentTheme }: NavbarProps) {
     return (
-        <div className="bg-navbar dark:bg-navbar-dark dark:text-gray-300 z-5 fixed navbar-shadow backdrop-blur-md bg-opacity-50 rounded-xl flex justify-between space-x-3 items-center">
-            <NavButton onClick={themeHandler}> {currentTheme === "dark" ? '🌞' : '🌚'}</NavButton>
-            <NavButton>Projects</NavButton>
-            <NavButton>Home</NavButton>
-            <NavButton>About Me</NavButton>
+        <div className="dark:text-gray-300 z-50 fixed rounded-xl flex justify-between space-x-3 items-center isolate bg-navbar/20 dark:bg-navbar-dark/20 shadow-lg ring-1 ring-black/5 dark:ring-white/10 backdrop-blur-lg">
+            <NavButton special={true} onClick={themeHandler}> {currentTheme === "dark" ? '🌚' : '🌞'}</NavButton>
+            <NavButton scrollTo="projects" >Projects</NavButton>
+            <NavButton scrollTo="aboutme">About Me</NavButton>
+            <NavButton scrollTo="top">Home</NavButton>
         </div>
     );
 }
 
 
-const NavButton = ({ children, onClick }: NavButtonProps) => {
-    return (
-        <button className={`p-3 py-4 rounded-xl text-lg hover:bg-opacity-5 hover:dark:bg-opacity-5 hover:bg-black hover:dark:bg-white active:text-base active:px-4 font-medium`} onClick={onClick}>
-            <p className="text">{children}</p>
-        </button>
-    );
-}

@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className="transition duration-1000">
+    <html lang="nl" className="scroll-smooth">
       <body className={inter.className}>
         {children}
       </body>

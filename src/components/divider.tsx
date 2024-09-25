@@ -1,5 +1,5 @@
-export default function Divider() {
+export default function Divider({className}: {className?: string}) {
     return (
-        <div className="w-1/3 h-0.5 bg-gray-600 dark:bg-gray-400 mt-2 mb-5 rounded-full"></div>
+        <div className={`z-10 my-2 h-px py-0.5 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-black/30 to-transparent dark:via-white/30 ${className} mx-auto`}></div>
     )
 }

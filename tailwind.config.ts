@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require('tailwindcss/plugin');
 
 const config: Config = {
   darkMode: 'class',
@@ -21,6 +22,18 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [plugin(function({ addUtilities }: { addUtilities: (utilities: Record<string, any>, variants?: string[]) => void }) {
+    const newUtilities = {
+      '.navbar-shadow': {
+        boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 6.3px 0 rgba(0, 0, 0, 0.15)',
+      },
+      '.navbar-shadow-dark': {
+        boxShadow: '0 2px 4px 0 rgba(50, 50, 50, 0.3), inset 0 0 6.3px 0 rgba(50, 50, 50, 0.35)',
+      },
+    };
+
+    addUtilities(newUtilities, ['responsive', 'hover']);
+  }),
+],
 };
 export default config;
