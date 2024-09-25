@@ -1,10 +1,10 @@
-import { Inter } from "next/font/google";
+import { Noto_Sans_Display } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-const inter = Inter({
+const noto = Noto_Sans_Display({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100" ,"200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -20,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className="scroll-smooth">
-      <body className={`${inter.className}`}>
-      {children}
-      </body>
-    </html>
-  );
+		<html lang='nl' className='scroll-smooth text-[#131515] dark:text-[#f2f4f3]'>
+			<body className={`${noto.className}`}>{children}</body>
+		</html>
+	);
 }

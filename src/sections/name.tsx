@@ -3,7 +3,7 @@ import IconLink from '@/components/iconlink';
 
 export default function Name() {
     return (
-        <div className="mt-32 dark:text-gray-300 z-10">
+        <div className="mt-32 dark:text-gray-300 select-none z-10">
             <h1 className="md:text-5xl text-4xl font-semibold tracking-tighter">Douwe Westerdijk.</h1>
             <h2 className="md:text-2xl text-xl font-extralight relative bottom-1 md:left-72 left-48">(software dev)</h2>
 

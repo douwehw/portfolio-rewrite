@@ -5,15 +5,3 @@
 body * {
     @apply transition-all duration-100;
 }
-
-/* .navbar-shadow {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 6.3px 0 rgba(0, 0, 0, 0.15);
-}
-
-.navbar-shadow-dark {
-    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.75), inset 0 0 6.3px 0 rgba(255, 255, 255, 0.85);
-} */
-
-.protile-shadow-sharp {
-    box-shadow: 0 0 2px 0 rgb(125, 125, 125);
-}
