@@ -15,6 +15,7 @@
 
 # production
 /build
+/actually-serveable-static-html-css-js-files
 
 # misc
 .DS_Store
