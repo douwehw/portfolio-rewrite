@@ -5,7 +5,7 @@ export default function Name() {
     return (
         <div className="mt-32 dark:text-gray-300 z-10">
             <h1 className="md:text-5xl text-4xl font-semibold tracking-tighter">Douwe Westerdijk.</h1>
-            <h2 className="md:text-2xl text-xl font-extralight relative bottom-1 md:left-72 left-56">(software dev)</h2>
+            <h2 className="md:text-2xl text-xl font-extralight relative bottom-1 md:left-72 left-48">(software dev)</h2>
 
             <div className="flex space-x-1 relative bottom-7 right-2">
                 <IconLink href="https://open.spotify.com/user/quzalp2snf12okvqpdv1lzgpp?si=81e9194fed9b42b8">
