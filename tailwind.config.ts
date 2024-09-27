@@ -16,6 +16,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         "primary-light": "#F8F7FD",
         "primary-dark": "#121212",
+        "text-light": "#131515",
+        "text-dark": "#f2f4f3",
         "navbar": "#DBDBDB",
         "navbar-dark": `#2b2b2b`,
         "15-black": "#00000026",

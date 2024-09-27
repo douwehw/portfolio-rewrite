@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-		<html lang='nl' className='scroll-smooth text-[#131515] dark:text-[#f2f4f3]'>
+		<html lang='nl' className='scroll-smooth text-text-light dark:text-text-dark'>
 			<body className={`${noto.className}`}>{children}</body>
 		</html>
 	);

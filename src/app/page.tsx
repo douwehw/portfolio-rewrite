@@ -16,6 +16,9 @@ import { loadStarsPreset } from "tsparticles-preset-stars";
 import Particles from "react-tsparticles";
 
 export default function Home() {
+	const darkTheme = "#0b090a";
+	const lightTheme = "#f8f9fa";
+
 	const [theme, setTheme] = useState("dark");
 
 	useEffect(() => {
@@ -49,12 +52,12 @@ export default function Home() {
 					preset: "stars",
 					background: {
 						color: {
-							value: theme === "light" ? "#f8f9fa" : "#0b090a",
+							value: theme === "light" ? lightTheme : darkTheme,
 						},
 					},
 					particles: {
 						color: {
-							value: theme === "light" ? "#0b090a" : "#f8f9fa", // Set particle color based on theme
+							value: theme === "light" ? darkTheme : lightTheme,
 						},
 						opacity: {
 							value: 0.5,
@@ -63,9 +66,6 @@ export default function Home() {
 							enable: true,
 							speed: 1,
 						},
-						blur: {
-							value: 5,
-						},
 						size: {
 							value: 1.5,
 						},
@@ -73,7 +73,7 @@ export default function Home() {
 					},
 					fullScreen: {
 						enable: true,
-						zIndex: 0, // Set z-index to -1 to ensure particles are behind other elements
+						zIndex: 0,
 					},
 				}}
 			/>

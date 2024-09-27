@@ -13,7 +13,7 @@ export default function IconLink({ children, href }: IconLinkProps) {
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ scale: 1.25 }} 
-            transition={{ type: "spring", duration: 0.035 }}
+            transition={{ type: "spring", duration: 0.001 }}
         >
             {children}
         </motion.a>
