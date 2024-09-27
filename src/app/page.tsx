@@ -8,18 +8,25 @@ import Bottom from "@/sections/bottom";
 
 import PageWrapper from "@/components/pagewrapper";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
-import { useCallback } from "react";
 import { Engine } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import Particles from "react-tsparticles";
+
+declare global {
+	interface Window {
+		setBackgroundSpeed: (speed: number) => void;
+	}
+}
 
 export default function Home() {
 	const darkTheme = "#0b090a";
 	const lightTheme = "#f8f9fa";
 
 	const [theme, setTheme] = useState("dark");
+
+	const [backgroundSpeed, setBackgroundSpeedState] = useState(1);
 
 	useEffect(() => {
 		if (theme === "dark") {
@@ -28,6 +35,13 @@ export default function Home() {
 			document.documentElement.classList.remove("dark");
 		}
 	}, [theme]);
+
+	useEffect(() => {
+		window.setBackgroundSpeed = function (speed: number): void {
+			setBackgroundSpeedState(speed);
+			console.log(`Background speed set to ${speed}`);
+		};
+	}, []);
 
 	const handleTheme = () => {
 		setTheme(theme === "light" ? "dark" : "light");
@@ -64,12 +78,12 @@ export default function Home() {
 						},
 						move: {
 							enable: true,
-							speed: 1,
+							speed: backgroundSpeed,
 						},
 						size: {
 							value: 1.5,
 						},
-						fps_limit: 15,
+						fps_limit: (backgroundSpeed * 15 < 60 ? backgroundSpeed * 15 : 60) as number,
 					},
 					fullScreen: {
 						enable: true,

@@ -11,7 +11,7 @@ const noto = Noto_Sans_Display({
 
 export const metadata: Metadata = {
   title: "Douwe Westerdijk",
-  description: "Portfolio",
+  description: "Portfolio - Software Developer",
 };
 
 export default function RootLayout({
