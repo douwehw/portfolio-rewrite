@@ -7,6 +7,7 @@ import AboutMe from "@/sections/aboutme";
 import Bottom from "@/sections/bottom";
 
 import PageWrapper from "@/components/pagewrapper";
+import { isDay } from "@/util/date";
 
 import { useState, useEffect, useCallback } from "react";
 
@@ -24,7 +25,7 @@ export default function Home() {
 	const darkTheme = "#0b090a";
 	const lightTheme = "#f8f9fa";
 
-	const [theme, setTheme] = useState("dark");
+	const [theme, setTheme] = useState(isDay() ? "light" : "dark");
 
 	const [backgroundSpeed, setBackgroundSpeedState] = useState(1);
 

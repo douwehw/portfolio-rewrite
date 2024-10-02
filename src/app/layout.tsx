@@ -4,7 +4,7 @@ import "./globals.css";
 
 const noto = Noto_Sans_Display({
   subsets: ["latin"],
-  weight: ["100" ,"200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-		<html lang='nl' className='scroll-smooth text-text-light dark:text-text-dark'>
-			<body className={`${noto.className}`}>{children}</body>
-		</html>
-	);
+    <html lang='nl' className='scroll-smooth dark:text-text-dark'>
+      <body className={`${noto.className} bg-primary-light dark:bg-primary-dark`}>{children}</body>
+    </html>
+  );
 }

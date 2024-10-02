@@ -8,11 +8,11 @@ interface IconLinkProps {
 
 export default function IconLink({ children, href }: IconLinkProps) {
     return (
-        <motion.a 
-            href={href} 
-            target="_blank" 
+        <motion.a
+            href={href}
+            target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.25 }} 
+            whileHover={{ scale: 1.25 }}
             transition={{ type: "spring", duration: 0.001 }}
         >
             {children}

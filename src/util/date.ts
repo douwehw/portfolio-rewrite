@@ -11,3 +11,9 @@ export function getAge(birthdate: string): number {
     }
     return age;
 }
+
+export function isDay(): boolean {
+    const now = new Date();
+    const hour = now.getHours();
+    return hour >= 8 && hour < 21;
+}
