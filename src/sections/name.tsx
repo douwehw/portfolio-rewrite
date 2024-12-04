@@ -14,7 +14,7 @@ export default function Name() {
                     <IconLink href="https://github.com/douwehw">
                         <FaGithub className="text-gray-800 dark:text-white" size={30} />
                     </IconLink>
-                    <IconLink href="https://www.linkedin.com/in/douwe-westerdijk-1a4bb8312">
+                    <IconLink href="www.linkedin.com/in/douwe-westerdijk-1a4bb8312">
                         <FaLinkedin className="text-blue-700" size={30} />
                     </IconLink>
                 </div>
