@@ -12,8 +12,14 @@ export function getAge(birthdate: string): number {
     return age;
 }
 
-export function isDay(): boolean {
+export async function isDay() {
+    const response = await fetch('https://api.sunrisesunset.io/json?lat=53.22369&lng=6.56479');
+    const data = await response.json();
+
     const now = new Date();
-    const hour: number = now.getHours();
-    return hour >= 8 && hour < 21;
+
+    const sunrise = new Date(`${now.toDateString()} ${data.results.sunrise} UTC`);
+    const sunset = new Date(`${now.toDateString()} ${data.results.sunset} UTC`);
+
+    return (now >= sunrise && now <= sunset);
 }
