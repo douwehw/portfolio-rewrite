@@ -35,9 +35,9 @@ export default function Projects() {
                     hours={8}
                 />
                 <ProjectTile
-                    href=""
-                    name="Persoonlijke Website"
-                    description="Mijn website, je kijkt er nu naar..."
+                    href="https://github.com/douwehw/portfolio-rewrite"
+                    name="Persoonlijke Website (source code)"
+                    description="Mijn website, je kijkt er nu naar...)"
                     language="React"
                     rating={8}
                     hours={20}
