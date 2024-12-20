@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: 'actually-serveable-static-html-css-js-files',
-  output: "standalone"
+  distDir: 'build',
+  output: "export"
 };
 
 export default nextConfig;
