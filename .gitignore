@@ -12,9 +12,6 @@
 # next.js
 /.next/
 /out/
-/_next
-/server
-
 
 # production
 /build
@@ -39,11 +36,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-.gitignore
-bun.lockb
-index.txt
-/standalone
-/static
-/types
-/cache
