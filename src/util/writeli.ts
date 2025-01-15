@@ -2,7 +2,7 @@ export const Console = {
     WriteLi: function (): void {
         console.log(
             `
-            using System;
+using System;
 using System.Collections.Generic;
 using Raylib_cs;
 using System.Numerics;
