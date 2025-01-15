@@ -1,6 +1,7 @@
 import { Engine } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import Particles from "react-tsparticles";
+import { Console } from "@/util/writeli";
 
 import { useState, useEffect, useCallback, ReactNode } from "react";
 
@@ -20,6 +21,12 @@ export default function Background({theme}: BackgroundProps): ReactNode {
 			console.log(`Background speed set to ${speed}`);
 		};
 	}, []);
+
+	window.Console = {
+		WriteLi: function (): void {
+			Console.WriteLi();
+		}
+	}
 
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadStarsPreset(engine);

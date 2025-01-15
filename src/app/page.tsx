@@ -15,8 +15,9 @@ import { useState, useEffect } from "react";
 declare global {
 	interface Window {
 		setBackgroundSpeed: (speed: number) => void;
+		Console: { WriteLi: () => void }
+		}
 	}
-}
 
 const day = await isDay();
 
