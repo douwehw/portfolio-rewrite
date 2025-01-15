@@ -12,7 +12,7 @@ interface BackgroundProps {
 const darkTheme = "#0b090a";
 const lightTheme = "#f8f9fa";
 
-export default function Background({theme}: BackgroundProps): ReactNode {
+export default function Background({ theme }: BackgroundProps): ReactNode {
 	const [backgroundSpeed, setBackgroundSpeedState] = useState(1);
 
 	useEffect(() => {
@@ -22,11 +22,14 @@ export default function Background({theme}: BackgroundProps): ReactNode {
 		};
 	}, []);
 
-	window.Console = {
-		WriteLi: function (): void {
-			Console.WriteLi();
+	useEffect(() => {
+		window.Console = {
+			WriteLi: function (): void {
+				Console.WriteLi();
+			}
 		}
-	}
+	}, [])
+
 
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadStarsPreset(engine);
