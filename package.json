@@ -1,6 +1,6 @@
 {
   "name": "portfolio-rewrite",
-  "version": "0.1.0",
+  "version": "0.1.0/14.2.13",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,7 +14,7 @@
     "@nextui-org/react": "^2.4.8",
     "@tsparticles/preset-stars": "^3.1.0",
     "framer-motion": "^11.5.6",
-    "next": "14.2.13",
+    "next": "^15.3.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.3.0",

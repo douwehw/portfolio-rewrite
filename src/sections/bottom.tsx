@@ -1,5 +1,6 @@
 import { FaEnvelope } from 'react-icons/fa';
 import { getYear } from '@/util/date';
+import { GoKey } from 'react-icons/go';
 
 export default function Bottom() {
     return (
@@ -10,6 +11,7 @@ export default function Bottom() {
                 <div className="tracking-tight text-sm p-3 italic text-right cursor-pointer flex items-center justify-end space-x-2">
                     <FaEnvelope />
                     <a target="_blank" rel="noopener noreferrer" href="mailto:douwewesterdijk@gmail.com?subject=Hi!">Contact</a>
+                    <p>|</p>
                 </div>
             </div>
         </div>
